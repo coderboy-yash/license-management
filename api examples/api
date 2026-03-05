@@ -1,0 +1,8 @@
+POST /licenses
+
+{
+  "vin": "1HGCM82633A004352",
+  "license_type": "Mid",
+  "vehicle_type": "ICE",
+  "expiry_date": "2027-01-01"
+}

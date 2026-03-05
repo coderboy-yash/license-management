@@ -1,0 +1,23 @@
+admin create a feature table to list all the features present in our app
+license type , mentions all the features that are enabled in the plan,
+api takes all the feature from feature table and mark it as disable.
+api first check the feature mentioned by admin exist or not in db, if exist mark it as enable,
+now the plan is created
+
+user when enters create a license , by hitting create license / type where he mention the type of license he want
+api creates a license for it {
+license_id,license_type,expiry_date
+} and return a license id, and internally it maps to the license type he requested,
+
+next time when the app requires which features are enable in this license , it just sends a license_id, api checks its expiry date first, if it is valid, find the license type it is mapped to ,and send the features enabled as true or false in that license
+
+user will give first time only {
+vin,
+license type he wants,
+type of vehicle,
+expiry data,
+}
+and in return he gets a license id so he do not need to send all details everytime,except during update of license
+when he gives license id next time{
+he gets features enabled based on its license type and type of vehicle
+}
